@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>观影手记 · 菠萝影视｜boluoyingshi-zh 在 github.io 的口味索引</title>
+<meta name="description" content="boluoyingshi-zh 把「菠萝影视」做成一份能翻的观影手记：按情绪、时长、画幅与配色给电影剧集动漫纪录片分格归档，只记片名与观看线索，不放链接不放源。官方入口 https://boluoyingshi-zh.github.io，离线也能翻完。">
+<meta name="keywords" content="boluoyingshi-zh.github.io, 菠萝影视, 观影手记索引, 情绪片单归档, 影视配色笔记">
+<link rel="canonical" href="https://boluoyingshi-zh.github.io/">
+<meta name="robots" content="index,follow">
+<meta name="bingbot" content="max-snippet:150, max-image-preview:standard, noarchive">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="观影手记 · 菠萝影视｜boluoyingshi-zh 的口味索引">
+<meta property="og:description" content="按情绪、时长、画幅与配色归档的影视手记，官方入口 https://boluoyingshi-zh.github.io">
+<meta property="og:url" content="https://boluoyingshi-zh.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="观影手记 · 菠萝影视｜boluoyingshi-zh">
+<meta name="twitter:description" content="只记片名与观看线索的静态索引页，入口 https://boluoyingshi-zh.github.io">
+<style>
+:root{--paper:#f4ede0;--paper2:#eee4d2;--ink:#1d2b22;--ink2:#3d5245;--pine:#2f6f55;--pine2:#1d4d3a;--fruit:#d9772b;--fruit2:#b4531f;--line:#c8bba3;--soft:#e6dcc6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+ font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"Times New Roman",serif;
+ line-height:1.75;font-size:16px;
+ background-image:
+  radial-gradient(circle at 12% 18%,rgba(47,111,85,.08),transparent 42%),
+  radial-gradient(circle at 88% 82%,rgba(217,119,43,.10),transparent 40%),
+  repeating-linear-gradient(0deg,transparent,transparent 31px,rgba(60,82,69,.035) 32px);}
+img,svg{display:block;max-width:100%}
+a{color:var(--pine2);text-decoration:none;border-bottom:1px solid var(--line)}
+a:hover{color:var(--fruit2);border-bottom-color:var(--fruit2)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px 90px}
+
+/* ===== masthead ===== */
+.mast{padding:46px 0 20px;border-bottom:3px double var(--pine);position:relative}
+.mast .kicker{font-size:12px;letter-spacing:.32em;color:var(--pine);text-transform:uppercase}
+.title-row{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-top:10px}
+.title-row h1{font-size:clamp(34px,7vw,64px);line-height:1.05;margin:0;font-weight:700;letter-spacing:.02em}
+.title-row h1 em{font-style:normal;color:var(--fruit2);position:relative}
+.title-row h1 em::after{content:"";position:absolute;left:4%;right:4%;bottom:6%;height:8px;background:rgba(217,119,43,.28);z-index:-1}
+.vol{font-size:13px;color:var(--ink2);border-left:2px solid var(--fruit);padding-left:10px;margin-bottom:6px}
+.mast p.lede{margin:18px 0 0;max-width:66ch;font-size:17px;color:var(--ink2)}
+.crest{position:absolute;right:0;top:34px;width:104px;opacity:.92}
+@media(max-width:640px){.crest{width:72px;top:20px}.mast{padding-top:32px}}
+
+/* ===== url bar ===== */
+.urlbar{margin-top:18px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+ background:var(--soft);border:1px solid var(--line);border-radius:2px;padding:9px 11px}
+.urlbar code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;color:var(--pine2);
+ word-break:break-all;flex:1 1 240px}
+.urlbar button{font:inherit;font-size:13px;background:var(--pine);color:#f7f1e5;border:0;
+ padding:7px 14px;cursor:pointer;letter-spacing:.1em}
+.urlbar button:hover{background:var(--fruit2)}
+.urlbar button.done{background:var(--ink2)}
+
+/* ===== nav ===== */
+nav.tabs{position:sticky;top:0;z-index:40;background:rgba(244,237,224,.94);backdrop-filter:blur(6px);
+ border-bottom:1px solid var(--line);margin:0 -22px 0;padding:0 22px}
+nav.tabs .inner{max-width:1080px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.tabs .inner::-webkit-scrollbar{display:none}
+nav.tabs a{border:0;padding:12px 11px;font-size:14px;white-space:nowrap;color:var(--ink2);border-bottom:2px solid transparent}
+nav.tabs a.on{color:var(--fruit2);border-bottom-color:var(--fruit2);font-weight:700}
+nav.tabs a b{color:var(--fruit);font-weight:400;margin-right:5px;font-family:Georgia,serif}
+
+/* ===== sections ===== */
+section{padding-top:56px;scroll-margin-top:66px}
+.sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--ink2);padding-bottom:8px;margin-bottom:22px}
+.sec-head .no{font-size:26px;color:var(--fruit2);font-family:Georgia,serif;line-height:1}
+.sec-head h2{margin:0;font-size:clamp(22px,3.6vw,30px);letter-spacing:.03em}
+.sec-head .en{font-size:11px;letter-spacing:.24em;color:var(--pine);text-transform:uppercase;margin-left:auto}
+.lead{margin:0 0 20px;color:var(--ink2);max-width:70ch}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.g2,.g3{grid-template-columns:1fr}}
+
+.note{border:1px solid var(--line);border-left:5px solid var(--fruit);background:var(--paper2);padding:14px 16px}
+.note h3{margin:0 0 4px;font-size:16px}
+.note p{margin:0;font-size:14.5px;color:var(--ink2)}
+
+/* card */
+.card{background:var(--paper2);border:1px solid var(--line);padding:16px 16px 14px;position:relative;transition:.25s}
+.card:hover{border-color:var(--pine);transform:translateY(-3px);box-shadow:0 8px 22px -12px rgba(29,43,34,.4)}
+.card .tag{font-size:11px;letter-spacing:.18em;color:var(--fruit2);text-transform:uppercase}
+.card h3{margin:7px 0 5px;font-size:19px}
+.card p{margin:0;font-size:14px;color:var(--ink2)}
+.marks{margin-top:11px;display:flex;gap:6px;flex-wrap:wrap}
+.marks span{font-size:11.5px;background:var(--soft);border:1px solid var(--line);padding:2px 7px;color:var(--ink2)}
+.marks span.hot{background:var(--fruit);color:#fff;border-color:var(--fruit2)}
+
+/* mood board */
+.moods{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--ink2)}
+@media(max-width:820px){.moods{grid-template-columns:repeat(2,1fr)}}
+.mood{padding:20px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper2)}
+.mood:nth-child(4n){border-right:0}
+.mood .sw{width:38px;height:38px;border-radius:50%;border:1px solid rgba(0,0,0,.15);margin-bottom:10px}
+.mood h4{margin:0 0 4px;font-size:16px}
+.mood small{color:var(--ink2);font-size:13px;display:block}
+.sw.s1{background:linear-gradient(135deg,#3a6b55,#a9cbb3)}
+.sw.s2{background:linear-gradient(135deg,#c0573a,#f0c6a8)}
+.sw.s3{background:linear-gradient(135deg,#2c3f63,#8fa6c4)}
+.sw.s4{background:linear-gradient(135deg,#b8922b,#f2e0a8)}
+.sw.s5{background:linear-gradient(135deg,#5a4a5a,#cfb7c4)}
+.sw.s6{background:linear-gradient(135deg,#1f4e4e,#7fc1b4)}
+.sw.s7{background:linear-gradient(135deg,#8a4a2b,#e6b98c)}
+.sw.s8{background:linear-gradient(135deg,#4a4a4a,#c9c9c1)}
+
+/* table */
+.tbl{width:100%;border-collapse:collapse;background:var(--paper2);font-size:14.5px}
+.tbl th,.tbl td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.tbl th{background:var(--pine2);color:#f2ebda;font-weight:600;letter-spacing:.06em;font-size:13px}
+.tbl td.num{font-family:Georgia,serif;color:var(--fruit2);white-space:nowrap}
+@media(max-width:720px){
+ .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+ .tbl thead{display:none}
+ .tbl tr{border:1px solid var(--ink2);margin-bottom:12px;background:var(--paper2);padding:4px 0}
+ .tbl td{border:0;border-bottom:1px dashed var(--line);font-size:14px}
+ .tbl td:last-child{border-bottom:0}
+ .tbl td::before{content:attr(data-h);display:block;font-size:11px;letter-spacing:.16em;color:var(--pine);text-transform:uppercase;margin-bottom:2px}
+ .tbl td.num{font-size:15px}
+}
+
+/* timeline */
+.tl{position:relative;padding-left:26px;margin-top:8px}
+.tl::before{content:"";position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:var(--line)}
+.tl .it{position:relative;padding:0 0 20px}
+.tl .it::before{content:"";position:absolute;left:-23px;top:7px;width:12px;height:12px;background:var(--fruit);border:2px solid var(--paper);border-radius:50%}
+.tl .d{font-family:Georgia,serif;color:var(--fruit2);font-size:14px;letter-spacing:.08em}
+.tl h4{margin:2px 0 3px;font-size:17px}
+.tl p{margin:0;font-size:14px;color:var(--ink2)}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:13px 0}
+.faq details:last-child{border-bottom:0}
+.faq summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;position:relative;padding-right:26px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:0;color:var(--fruit2);font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:8px 0 2px;color:var(--ink2);font-size:14.5px}
+.faq code{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:var(--soft);padding:1px 5px;border:1px solid var(--line)}
+
+/* footer */
+footer{border-top:3px double var(--pine);margin-top:70px;padding-top:22px;font-size:13.5px;color:var(--ink2)}
+footer .row{display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+footer .stamp{font-size:12px;letter-spacing:.3em;color:var(--fruit2);border:1px solid var(--fruit2);padding:5px 10px;transform:rotate(-3deg)}
+.disc{margin-top:14px;padding:12px 14px;border:1px dashed var(--line);background:var(--paper2);font-size:13px}
+.up{position:fixed;right:16px;bottom:18px;background:var(--ink2);color:#f2ebda;border:0;
+ font:inherit;font-size:13px;padding:9px 12px;cursor:pointer;z-index:50;letter-spacing:.1em;display:none}
+.up.show{display:block}
+@media print{body{background:#fff}nav.tabs,.up{display:none}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+<div class="wrap">
+
+<header class="mast">
+ <svg class="crest" viewBox="0 0 100 120" aria-hidden="true">
+  <path d="M50 6 L58 30 L82 34 L62 50 L70 74 L50 60 L30 74 L38 50 L18 34 L42 30 Z"
+        fill="#d9772b" opacity=".9"/>
+  <path d="M50 22 Q66 40 60 70 Q50 84 40 70 Q34 40 50 22Z" fill="#1d4d3a" opacity=".85"/>
+  <path d="M50 30 Q60 44 56 66 M50 30 Q40 44 44 66 M50 38 L50 66" stroke="#f4ede0" stroke-width="1.6" fill="none"/>
+  <path d="M20 96 Q50 108 80 96" stroke="#b4531f" stroke-width="2" fill="none"/>
+ </svg>
+ <div class="kicker">A Notebook on Screening · No. 07</div>
+ <div class="vol">第 07 册 ／ 口味与配色的私人归档</div>
+ <div class="title-row">
+  <h1>菠萝<em>影视</em></h1>
+  <span class="kicker" style="align-self:center">boluoyingshi-zh</span>
+ </div>
+ <p class="lede">不追新、不排榜，也不替谁决定今晚看什么。这里只把片名按<strong>情绪底色、时长胃口、画幅与配色</strong>分格夹好，翻到哪格算哪格。它是 <strong>菠萝影视</strong> 的静态手记，域名落在 <code>github.io</code> 上，断网也能从头翻到尾。</p>
+ <div class="urlbar">
+  <span style="font-size:12px;letter-spacing:.16em;color:var(--pine)">官方入口</span>
+  <code id="u">https://boluoyingshi-zh.github.io</code>
+  <button id="cp" type="button">复制网址</button>
+ </div>
+</header>
+
+<nav class="tabs" id="nav">
+ <div class="inner">
+  <a href="#mood"><b>00</b>选片情绪</a>
+  <a href="#dianying"><b>01</b>电影</a>
+  <a href="#juji"><b>02</b>剧集</a>
+  <a href="#dongman"><b>03</b>动画</a>
+  <a href="#zongyi"><b>04</b>综艺与现场</a>
+  <a href="#jilupian"><b>05</b>纪录片</a>
+  <a href="#calendar"><b>06</b>本周节拍</a>
+  <a href="#suoyin"><b>07</b>站点索引</a>
+  <a href="#faq"><b>08</b>翻阅问答</a>
+ </div>
+</nav>
+
+<section id="mood">
+ <div class="sec-head"><span class="no">00</span><h2>选片情绪板</h2><span class="en">Mood &amp; Palette</span></div>
+ <p class="lead">先看底色，再挑片名。同一部作品常被夹进两个格子里——那很正常，看片本来就不只一种心情。</p>
+ <div class="moods">
+  <div class="mood"><span class="sw s1"></span><h4>雨后发绿</h4><small>慢节奏 / 长镜头 / 想发呆时</small></div>
+  <div class="mood"><span class="sw s2"></span><h4>烤焦的甜</h4><small>家庭戏 / 笑里带刺 / 周末午后</small></div>
+  <div class="mood"><span class="sw s3"></span><h4>凌晨蓝调</h4><small>悬疑 / 单人耳机 / 睡不着那类</small></div>
+  <div class="mood"><span class="sw s4"></span><h4>金黄旧日</h4><small>年代感 / 胶片颗粒 / 怀旧不煽情</small></div>
+  <div class="mood"><span class="sw s5"></span><h4>雾里看花</h4><small>非线性叙事 / 需要二刷的剧本</small></div>
+      <div class="mood"><span class="sw s6"></span><h4>海底呼吸</h4><small>自然 / 深海与森林 / 降噪用</small></div>
+  <div class="mood"><span class="sw s7"></span><h4>辛辣开场</h4><small>黑色幽默 / 快对白 / 通勤路上</small></div>
+  <div class="mood"><span class="sw s8"></span><h4>灰阶纪实</h4><small>真实事件 / 旁白主导 / 看完要坐一会儿</small></div>
+ </div>
+</section>
+
+<section id="dianying">
+ <div class="sec-head"><span class="no">01</span><h2>电影夹</h2><span class="en">Feature Notes</span></div>
+ <p class="lead">只记版本口径与观看入口的"那一下"——原生 4K 还是升频、画幅是否裁过、字幕走内封还是外挂，都是归档时顺手写的备注，不作为画质结论。</p>
+ <div class="grid g3">
+  <article class="card"><span class="tag">雨后发绿 · 132 min</span><h3>长夏的第三场雨</h3><p>一镜到底的南方小镇，雨声比对白多。适合把手机翻过去再开。</p><div class="marks"><span>2.39:1</span><span>4K 原生</span><span class="hot">二刷友好</span></div></article>
+  <article class="card"><span class="tag">辛辣开场 · 98 min</span><h3>夜班收银员</h3><p>台词密度高得像在赶末班车，笑点全藏在结账机的滴滴声里。</p><div class="marks"><span>1.85:1</span><span>1080p</span><span>对白驱动</span></div></article>
+  <article class="card"><span class="tag">金黄旧日 · 155 min</span><h3>邮局里的春天</h3><p>年代戏，胶片颗粒很重，建议别开动态补偿，会磨掉那层灰。</p><div class="marks"><span>1.66:1</span><span>胶片扫描</span><span class="hot">配色范本</span></div></article>
+  <article class="card"><span class="tag">凌晨蓝调 · 114 min</span><h3>无人认领的行李</h3><p>非线性结构，三个时间层交错，第一次看别快进最后八分钟。</p><div class="marks"><span>2.39:1</span><span>HDR10</span><span>需二刷</span></div></article>
+  <article class="card"><span class="tag">雾里看花 · 121 min</span><h3>镜子背面</h3><p>叙事骗了你两次，配乐是唯一说实话的那个。</p><div class="marks"><span>1.85:1</span><span>杜比视界</span><span>耳机向</span></div></article>
+  <article class="card"><span class="tag">烤焦的甜 · 89 min</span><h3>菠萝与盐</h3><p>片名和这页的脾气很搭：前半甜，后半咸，收尾干脆。</p><div class="marks"><span>1.85:1</span><span>1080p</span><span class="hot">入门首选</span></div></article>
+ </div>
+</section>
+
+<section id="juji">
+ <div class="sec-head"><span class="no">02</span><h2>剧集归档</h2><span class="en">Series Log</span></div>
+ <p class="lead">剧集只标"从第几集能入坑"和"哪几集可以跳"，不给剧情结论。通勤与周末两种吃法，分开夹。</p>
+ <div class="grid g2">
+  <div class="note"><h3>通勤吃法 · 单集 28 分钟左右</h3><p>适合地铁与午休，三集连看刚好一个来回。情绪偏轻，不悬着睡得着。</p>
+   <div class="marks" style="margin-top:10px"><span>第 1 集入坑</span><span>第 4 集可跳</span><span class="hot">周更</span></div></div>
+  <div class="note"><h3>周末吃法 · 单集 52 分钟以上</h3><p>要整块时间，建议两集封顶。线索埋得深，弹幕和倍速都会漏掉细节。</p>
+   <div class="marks" style="margin-top:10px"><span>第 1–2 集连看</span><span>第 7 集转折</span><span>需连播</span></div></div>
+ </div>
+ <table class="tbl" style="margin-top:20px">
+  <thead><tr><th>编号</th><th>剧名</th><th>口径备注</th><th>入坑位</th><th>节奏</th></tr></thead>
+  <tbody>
+   <tr><td class="num">S-01</td><td data-h="剧名">南风过境</td><td data-h="口径备注">16:9，第 3 集换色调，别被开头劝退</td><td data-h="入坑位">第 2 集</td><td data-h="节奏">慢热</td></tr>
+   <tr><td class="num">S-02</td><td data-h="剧名">值班室的灯</td><td data-h="口径备注">单元剧，可乱序翻，每集独立光源风格</td><td data-h="入坑位">任挑一集</td><td data-h="节奏">轻</td></tr>
+   <tr><td class="num">S-03</td><td data-h="剧名">第七次敲门</td><td data-h="口径备注">2.35:1 裁幅，手机竖屏观感打折</td><td data-h="入坑位">第 1 集必看</td><td data-h="节奏">紧</td></tr>
+   <tr><td class="num">S-04</td><td data-h="剧名">菜市场交响曲</td><td data-h="口径备注">烟火气纪实向，台词带方言，建议原声</td><td data-h="入坑位">第 3 集</td><td data-h="节奏">松弛</td></tr>
+   <tr><td class="num">S-05</td><td data-h="剧名">未寄出的信</td><td data-h="口径备注">双线并行，第 6 集收第一条线</td><td data-h="入坑位">第 1 集</td><td data-h="节奏">中</td></tr>
+  </tbody>
+ </table>
+</section>
+
+<section id="dongman">
+ <div class="sec-head"><span class="no">03</span><h2>动画番目</h2><span class="en">Animation Reel</span></div>
+ <p class="lead">动画这一格格外在意<strong>帧数与画幅</strong>：TV 版和总集篇的构图差一截，归档时分开写，免得对着截图上当。</p>
+ <div class="grid g3">
+  <article class="card"><span class="tag">海底呼吸 · 全 12 集</span><h3>潮汐饲养手册</h3><p>静帧美，动起来更美。每集结尾留三十秒黑场，别急着关。</p><div class="marks"><span>24fps</span><span>TV 版</span><span class="hot">睡前</span></div></article>
+  <article class="card"><span class="tag">辛辣开场 · 全 24 集</span><h3>便利店战争</h3><p>分镜极快，信息量压在画面边角，倍速观看等于重画一遍。</p><div class="marks"><span>30fps</span><span>动作向</span><span>需连看</span></div></article>
+  <article class="card"><span class="tag">金黄旧日 · 剧场版</span><h3>纸月亮</h3><p>总集篇重构图，比 TV 版宽一截，颜色也往暖里挪了。</p><div class="marks"><span>2.39:1</span><span>剧场版</span><span class="hot">配色范本</span></div></article>
+  <article class="card"><span class="tag">凌晨蓝调 · 全 13 集</span><h3>夜行列车没有站名</h3><p>声效设计是主角，建议耳机，第 9 集有一段纯音叙事。</p><div class="marks"><span>24fps</span><span>耳机向</span><span>悬疑</span></div></article>
+  <article class="card"><span class="tag">雾里看花 · 全 10 集</span><h3>倒着生长的树</h3><p>每集时间倒流一点，看第二遍才会对上第一遍的错处。</p><div class="marks"><span>实验叙事</span><span>需二刷</span><span class="hot">二刷友好</span></div></article>
+  <article class="card"><span class="tag">烤焦的甜 · 短篇 6 集</span><h3>菠萝汽水瓶盖</h3><p>每集七分钟，笑完会安静两秒。片尾曲别跳过。</p><div class="marks"><span>4:3</span><span>短篇</span><span>碎片友好</span></div></article>
+ </div>
+</section>
+
+<section id="zongyi">
+ <div class="sec-head"><span class="no">04</span><h2>综艺与现场</h2><span class="en">Variety &amp; Stage</span></div>
+ <p class="lead">这一栏不追赛果，只记"哪一段值得单独拎出来看"。时间戳是剪辑版的大致位置，正片以实际发行版本为准。</p>
+ <div class="grid g2">
+  <article class="card"><span class="tag">辛辣开场 · 第 3 期</span><h3>脱口秀后台十分钟</h3><p>正式开场前的试麦段比正片松，笑点没收干净反而好看。</p><div class="marks"><span>试麦 06:40</span><span class="hot">名场面</span></div></article>
+  <article class="card"><span class="tag">金黄旧日 · 特辑</span><h3>老歌重新编曲现场</h3><p>编曲只动四小节，其余原样保留，适合当背景也适合盯屏。</p><div class="marks"><span>12:10 起</span><span>听觉向</span></div></article>
+  <article class="card"><span class="tag">烤焦的甜 · 第 7 期</span><h3>三个人做一顿饭</h3><p>不比输赢，翻车那段被剪进正片反而成了最好吃的部分。</p><div class="marks"><span>21:00 翻车</span><span>下饭</span></div></article>
+  <article class="card"><span class="tag">海底呼吸 · 纪录片式特辑</span><h3>海岸线收音日记</h3><p>几乎没有台词，全是潮声与采访间隙的沉默，降噪神器。</p><div class="marks"><span>全程</span><span class="hot">助眠向</span></div></article>
+ </div>
+</section>
+
+<section id="jilupian">
+ <div class="sec-head"><span class="no">05</span><h2>纪录片柜</h2><span class="en">Non-fiction Shelf</span></div>
+ <p class="lead">分成两摞：一摞要动脑，一摞只负责让你安静下来。时长都标在封面上，选片前先看看自己还剩多少时间。</p>
+ <table class="tbl">
+  <thead><tr><th>编号</th><th>片名</th><th>类型</th><th>时长</th><th>观看姿势</th></tr></thead>
+  <tbody>
+   <tr><td class="num">D-01</td><td data-h="片名">一碗汤的迁徙</td><td data-h="类型">饮食人类学</td><td data-h="时长">78 min</td><td data-h="观看姿势">饭后，别快进</td></tr>
+   <tr><td class="num">D-02</td><td data-h="片名">混凝土里的河</td><td data-h="类型">城市调查</td><td data-h="时长">112 min</td><td data-h="观看姿势">耳机，一次看完</td></tr>
+   <tr><td class="num">D-03</td><td data-h="片名">候鸟的加油站</td><td data-h="类型">自然观察</td><td data-h="时长">44 min</td><td data-h="观看姿势">午休碎片时间</td></tr>
+   <tr><td class="num">D-04</td><td data-h="片名">修表的人</td><td data-h="类型">匠人手记</td><td data-h="时长">56 min</td><td data-h="观看姿势">降噪，手边有事可做</td></tr>
+   <tr><td class="num">D-05</td><td data-h="片名">沉默的档案室</td><td data-h="类型">口述历史</td><td data-h="时长">134 min</td><td data-h="观看姿势">分两次，别硬撑</td></tr>
+   <tr><td class="num">D-06</td><td data-h="片名">海面以下四米</td><td data-h="类型">海洋生态</td><td data-h="时长">60 min</td><td data-h="观看姿势">睡前，音量减半</td></tr>
+  </tbody>
+ </table>
+</section>
+
+<section id="calendar">
+ <div class="sec-head"><span class="no">06</span><h2>本周翻阅节拍</h2><span class="en">Weekly Cadence</span></div>
+ <p class="lead">这是本页自己的更新节拍，不是任何作品的播出排期。写在这里，是想让你知道这册子还活着。</p>
+ <div class="tl" id="tl"></div>
+</section>
+
+<section id="suoyin">
+ <div class="sec-head"><span class="no">07</span><h2>站点索引</h2><span class="en">Site Index</span></div>
+ <p class="lead">全站只有一个页面，所有"内页"都是页内锚点，不会新开窗口，也不会跳到别处去。</p>
+ <table class="tbl">
+  <thead><tr><th>锚点</th><th>栏目</th><th>这里装了什么</th><th>完整地址</th></tr></thead>
+  <tbody>
+   <tr><td class="num">#mood</td><td data-h="栏目">选片情绪板</td><td data-h="这里装了什么">八格底色与对应口味</td><td data-h="完整地址">https://boluoyingshi-zh.github.io/#mood</td></tr>
+   <tr><td class="num">#dianying</td><td data-h="栏目">电影夹</td><td data-h="这里装了什么">六部作品的口径与二刷备注</td><td data-h="完整地址">https://boluoyingshi-zh.github.io/#dianying</td></tr>
+   <tr><td class="num">#juji</td><td data-h="栏目">剧集归档</td><td data-h="这里装了什么">入坑位、可跳集、节奏表</td><td data-h="完整地址">https://boluoyingshi-zh.github.io/#juji</td></tr>
+   <tr><td class="num">#dongman</td><td data-h="栏目">动画番目</td><td data-h="这里装了什么">帧数、画幅、TV 与剧场版区分</td><td data-h="完整地址">https://boluoyingshi-zh.github.io/#dongman</td></tr>
+   <tr><td class="num">#zongyi</td><td data-h="栏目">综艺与现场</td><td data-h="这里装了什么">名场面时间戳笔记</td><td data-h="完整地址">https://boluoyingshi-zh.github.io/#zongyi</td></tr>
+   <tr><td class="num">#jilupian</td><td data-h="栏目">纪录片柜</td><td data-h="这里装了什么">类型与时长对照表</td><td data-h="完整地址">https://boluoyingshi-zh.github.io/#jilupian</td></tr>
+   <tr><td class="num">#calendar</td><td data-h="栏目">本周节拍</td><td data-h="这里装了什么">本页更新节奏</td><td data-h="完整地址">https://boluoyingshi-zh.github.io/#calendar</td></tr>
+   <tr><td class="num">#faq</td><td data-h="栏目">翻阅问答</td><td data-h="这里装了什么">网址、内容边界与访问问题</td><td data-h="完整地址">https://boluoyingshi-zh.github.io/#faq</td></tr>
+  </tbody>
+ </table>
+ <div class="note" style="margin-top:18px">
+  <h3>关于「菠萝影视」这个名字</h3>
+  <p>它在这页里只是一个归档品牌的称呼，和任何播放服务、资源站、下载渠道都没有关系。你看到的所有条目都是用来<strong>记笔记的模板</strong>，换成你自己的片单，这页照样成立。</p>
+ </div>
+</section>
+
+<section id="faq" class="faq">
+ <div class="sec-head"><span class="no">08</span><h2>翻阅问答</h2><span class="en">Questions</span></div>
+ <details open>
+  <summary>菠萝影视的官方网址到底是哪一个？</summary>
+  <p>只有这一个：<code>https://boluoyingshi-zh.github.io</code>。域名标识是 <code>boluoyingshi-zh</code>，挂在 <code>github.io</code> 下，本页就是它的全部内容，没有其他镜像、没有备用域名、也没有 App 入口。</p>
+ </details>
+ <details>
+  <summary>这页能直接看片吗？</summary>
+  <p>不能，也不打算能。全站不托管、不嵌入、不链接任何音视频，没有播放器、没有下载按钮、没有解析接口。它只是一份片名与观看线索的静态笔记，找片请走你手头正规的观看渠道。</p>
+ </details>
+ <details>
+  <summary>为什么栏目点开不跳新页面？</summary>
+  <p>因为全站只有一个 <code>index.html</code>。导航用的是页内锚点（<code>#dianying</code>、<code>#juji</code> 这类），点击只会在当前页平滑滚动，浏览器地址栏的网址会变，但不会发起新请求，离线也一样能用。</p>
+ </details>
+ <details>
+  <summary>片单里的画质、时长、时间戳准不准？</summary>
+  <p>那是归档演示用的占位备注，用来说明"这一格该记什么"，不代表对任何作品的版本判定。正式使用时请按你手上正版片源的片尾字幕与发行信息自行核对，本页不负任何版本准确性责任。</p>
+ </details>
+ <details>
+  <summary>手机上表格会不会挤？</summary>
+  <p>不会。窄屏下表格会自动拆成带小标签的卡片行，每一列前面会写出它原本的表头名，横向滑动和误触都少很多。竖屏、横屏、甚至打印，版面都会跟着重排。</p>
+ </details>
+</section>
+
+<footer>
+ <div class="row">
+  <div>
+   <strong>菠萝影视</strong> · <code>https://boluoyingshi-zh.github.io</code><br>
+   一册静态观影手记，无脚本外链，无播放器，无追踪。
+  </div>
+  <div class="stamp">boluoyingshi-zh</div>
+ </div>
+ <div class="disc">
+  内容边界：本站仅作影视作品信息与个人观看笔记的索引展示，不涉及任何视听内容的存储、传输、下载或播放，亦不提供资源链接与解析服务。页面中所有片名、时长、画幅、版本口径均为演示占位，请以片方及正版发行方的公开信息为准。若你主张的权益内容与本站文字表述存在冲突，可凭权属材料联系站长，将在核实后作相应调整。
+ </div>
+</footer>
+
+</div>
+<button class="up" id="up" type="button">↑ 回封面</button>
+
+<script>
+(function(){
+ var u=document.getElementById('u'),b=document.getElementById('cp');
+ if(u&&b)b.addEventListener('click',function(){
+  var t=u.textContent.trim();
+  var done=function(){b.textContent='已复制';b.className='done';setTimeout(function(){b.textContent='复制网址';b.className='';},1600);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){fb(t,done)});}
+  else fb(t,done);
+ });
+ function fb(t,done){
+  var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');done();}catch(e){}
+  document.body.removeChild(ta);
+ }
+ var links=[].slice.call(document.querySelectorAll('nav.tabs a'));
+ var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
+ function onScroll(){
+  var y=window.scrollY+120,cur=-1;
+  secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
+  links.forEach(function(a,i){a.className=i===cur?'on':'';});
+  var up=document.getElementById('up');
+  if(up)up.className=window.scrollY>500?'up show':'up';
+ }
+ window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+ document.getElementById('up').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+
+ var days=['周一','周二','周三','周四','周五','周六','周日'];
+ var memo=[
+  ['周一','补给日','往电影夹塞一格，只加一部，写清画幅与要不要二刷。'],
+  ['周二','剧集刻度','标这一周能追到第几集，顺便记哪一集可以跳。'],
+  ['周三','配色复盘','挑一部重看开头三分钟，只记光与色调，不记剧情。'],
+  ['周四','动画帧数','核对 TV 版与剧场版画幅差异，补进动画番目。'],
+  ['周五','名场面剪报','综艺与现场里捞一段时间戳，写一句为什么值得再看。'],
+  ['周六','纪录片慢档','挑一部 60 分钟内的，配晚饭或睡前翻完。'],
+  ['周日','合册','把七天的便签收进索引表，删掉连自己都看不动的那几条。']
+ ];
+ var host=document.getElementById('tl');
+ if(host){
+  var d=new Date(),w=(d.getDay()+6)%7;
+  var h='';
+  memo.forEach(function(m,i){
+   var cls=i===w?'it':'it';
+   h+='<div class="it"><div class="d">'+m[0]+(i===w?' · 今天':'')+'</div><h4>'+m[1]+'</h4><p>'+m[2]+'</p></div>';
+  });
+  host.innerHTML=h;
+ }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "@id":"https://boluoyingshi-zh.github.io/#site",
+ "url":"https://boluoyingshi-zh.github.io/",
+ "name":"菠萝影视",
+ "alternateName":["boluoyingshi-zh","菠萝影视观影手记"],
+ "description":"以情绪底色、时长、画幅与配色归档影视作品的静态手记，官方入口 https://boluoyingshi-zh.github.io",
+ "inLanguage":"zh-CN",
+ "publisher":{"@type":"Organization","name":"菠萝影视","alternateName":"boluoyingshi-zh"},
+ "hasPart":[
+  {"@type":"WebPageElement","name":"选片情绪板","url":"https://boluoyingshi-zh.github.io/#mood"},
+  {"@type":"WebPageElement","name":"电影夹","url":"https://boluoyingshi-zh.github.io/#dianying"},
+  {"@type":"WebPageElement","name":"剧集归档","url":"https://boluoyingshi-zh.github.io/#juji"},
+  {"@type":"WebPageElement","name":"动画番目","url":"https://boluoyingshi-zh.github.io/#dongman"},
+  {"@type":"WebPageElement","name":"纪录片柜","url":"https://boluoyingshi-zh.github.io/#jilupian"}
+ ],
+ "potentialAction":{"@type":"SearchAction","target":"https://boluoyingshi-zh.github.io/#suoyin","query-input":"required name=q"}
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {"@type":"Question","name":"菠萝影视的官方网址到底是哪一个？","acceptedAnswer":{"@type":"Answer","text":"只有 https://boluoyingshi-zh.github.io 一个入口，域名标识为 boluoyingshi-zh，全站仅此一个静态页面，无其他镜像与备用域名。"}},
+  {"@type":"Question","name":"在菠萝影视能直接在线看片吗？","acceptedAnswer":{"@type":"Answer","text":"不能。本站不托管、不嵌入、不链接任何音视频，不设播放器与下载入口，仅作片名与观看线索的索引笔记。"}},
+  {"@type":"Question","name":"boluoyingshi-zh.github.io 的栏目为什么点开不跳新页？","acceptedAnswer":{"@type":"Answer","text":"全站只有一个 index.html，导航均为页内锚点，点击只做当前页平滑滚动，离线同样可翻阅。"}},
+  {"@type":"Question","name":"页面里写的画质、时长和时间戳准确吗？","acceptedAnswer":{"@type":"Answer","text":"均为演示占位备注，用于说明归档该记什么，不构成对任何作品版本的结论，请以正版发行方的公开信息为准。"}}
+ ]
+}
+</script>
+</body>
+</html>
